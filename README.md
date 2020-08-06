@@ -1,4 +1,4 @@
-##Keigan Internship 2020 -- Testing Programs README
+## Keigan Internship 2020 -- Testing Programs README
 
 For the included programs to work, you will need PyQt5, pyserial, pyqtgraph and the pykeigan libraries installed. 
 The TestMain and Test_Class will need to be in the same folder, as well as the .ui files, which were generated using QtDesigner.

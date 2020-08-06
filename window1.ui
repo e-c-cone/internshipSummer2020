@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1256</width>
+    <height>668</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="PlotWidget" name="velGraph" native="true">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>40</y>
+      <width>541</width>
+      <height>151</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="torGraph" native="true">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>230</y>
+      <width>541</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="posGraph" native="true">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>440</y>
+      <width>541</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>666</x>
+      <y>406</y>
+      <width>176</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Position: Desired vs. Measured</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>656</x>
+      <y>196</y>
+      <width>173</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Torque: Desired vs. Measured</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>17</y>
+      <width>176</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Velocity: Desired vs. Measured</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="velButton">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>24</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Test</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="torButton">
+    <property name="geometry">
+     <rect>
+      <x>492</x>
+      <y>206</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Test</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="posButton">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>415</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Test</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="velEnter">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>59</y>
+      <width>137</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="torEnter">
+    <property name="geometry">
+     <rect>
+      <x>492</x>
+      <y>241</y>
+      <width>137</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="posEnter">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>450</y>
+      <width>137</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maxLength">
+     <number>32748</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="listVel">
+    <property name="geometry">
+     <rect>
+      <x>331</x>
+      <y>88</y>
+      <width>301</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Values to test:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="listTor">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>270</y>
+      <width>301</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Values to test:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="listPos">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>480</y>
+      <width>301</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Values to test:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearVel">
+    <property name="geometry">
+     <rect>
+      <x>331</x>
+      <y>24</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear Values</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearTor">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>206</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear Values</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearPos">
+    <property name="geometry">
+     <rect>
+      <x>321</x>
+      <y>415</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear Values</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>241</y>
+      <width>155</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enter values one at a time:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>331</x>
+      <y>59</y>
+      <width>155</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enter values one at a time:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>321</x>
+      <y>450</y>
+      <width>155</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enter values one at a time:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearAllB">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>560</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear All</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="testAllB">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>560</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Test All</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="resetPID">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>560</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset All PID</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>-10</y>
+      <width>20</width>
+      <height>881</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="eTor">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>300</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Avg Error:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="eVel">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>120</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Avg Error:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ePos">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>510</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Avg Error:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="baudCombo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>221</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>0: 115200</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1: 230400</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2: 250000</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3: 460800</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4: 921600</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5: 1000000 </string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>171</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Choose Baud Rate:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="currentBaud">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>171</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Current Baud Rate:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="changeBaud">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Change Baud</string>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>76</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>Set Pos P:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>Set Pos I:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="text">
+      <string>Set Pos D:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="text">
+      <string>Set Speed P:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="text">
+      <string>Set Speed I:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>Set Speed D:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>410</y>
+      <width>81</width>
+      <height>132</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLineEdit" name="setPosP"/>
+    <widget class="QLineEdit" name="setPosI"/>
+    <widget class="QLineEdit" name="setPosD"/>
+    <widget class="QLineEdit" name="setSpeedP"/>
+    <widget class="QLineEdit" name="setSpeedI"/>
+    <widget class="QLineEdit" name="setSpeedD"/>
+   </widget>
+   <widget class="QSplitter" name="splitter_3">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>410</y>
+      <width>111</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="curPP">
+     <property name="text">
+      <string>Current:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="curPI">
+     <property name="text">
+      <string>Current:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="curPD">
+     <property name="text">
+      <string>Current:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="curSP">
+     <property name="text">
+      <string>Current:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="curSI">
+     <property name="text">
+      <string>Current:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="curSD">
+     <property name="text">
+      <string>Current:</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1256</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuKeigan">
+    <property name="title">
+     <string>Keigan</string>
+    </property>
+   </widget>
+   <addaction name="menuKeigan"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header>pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
